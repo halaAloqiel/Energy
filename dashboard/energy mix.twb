@@ -1,0 +1,784 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20212.21.0712.0907                               -->
+<workbook original-version='18.1' source-build='2021.2.1 (20212.21.0712.0907)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='Energymix_16341227535060' path='/workbooks' revision='1.6' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Parameter 1' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='1.0'>
+        <calculation class='tableau' formula='1.0' />
+      </column>
+    </datasource>
+    <datasource caption='energy-consumption-by-source-and-region-3' inline='true' name='federated.1esgd6e0re5vpf10hwu0p1bssw8m' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='energy-consumption-by-source-and-region-3' name='textscan.13g86k71ww6g461bq7hiz1pvgm3s'>
+            <connection class='textscan' directory='/Users/halaaloqiel/Desktop/coop/Personal Project 2/Data/data' filename='energy-consumption-by-source-and-region-3.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='real' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Coal Consumption ]' />
+            <value name='[Gas Consumption]' />
+            <value name='[Oil Consumption]' />
+            <value name='[Solar Consumption]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[energy-consumption-by-source-and-region-3.csv].[Coal Consumption - EJ]' />
+              <field name='[energy-consumption-by-source-and-region-3.csv].[Gas Consumption - EJ]' />
+              <field name='[energy-consumption-by-source-and-region-3.csv].[Oil Consumption - EJ]' />
+              <field name='[energy-consumption-by-source-and-region-3.csv].[Solar Consumption -EJ]' />
+            </group>
+          </groups>
+          <relation connection='textscan.13g86k71ww6g461bq7hiz1pvgm3s' name='energy-consumption-by-source-and-region-3.csv' table='[energy-consumption-by-source-and-region-3#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Entity' ordinal='0' />
+              <column datatype='string' name='Code' ordinal='1' />
+              <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='2' />
+              <column datatype='real' name='Oil Consumption - EJ' ordinal='3' />
+              <column datatype='real' name='Gas Consumption - EJ' ordinal='4' />
+              <column datatype='real' name='Coal Consumption - EJ' ordinal='5' />
+              <column datatype='real' name='Solar Consumption -EJ' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='real' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Coal Consumption ]' />
+            <value name='[Gas Consumption]' />
+            <value name='[Oil Consumption]' />
+            <value name='[Solar Consumption]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[energy-consumption-by-source-and-region-3.csv].[Coal Consumption - EJ]' />
+              <field name='[energy-consumption-by-source-and-region-3.csv].[Gas Consumption - EJ]' />
+              <field name='[energy-consumption-by-source-and-region-3.csv].[Oil Consumption - EJ]' />
+              <field name='[energy-consumption-by-source-and-region-3.csv].[Solar Consumption -EJ]' />
+            </group>
+          </groups>
+          <relation connection='textscan.13g86k71ww6g461bq7hiz1pvgm3s' name='energy-consumption-by-source-and-region-3.csv' table='[energy-consumption-by-source-and-region-3#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Entity' ordinal='0' />
+              <column datatype='string' name='Code' ordinal='1' />
+              <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='2' />
+              <column datatype='real' name='Oil Consumption - EJ' ordinal='3' />
+              <column datatype='real' name='Gas Consumption - EJ' ordinal='4' />
+              <column datatype='real' name='Coal Consumption - EJ' ordinal='5' />
+              <column datatype='real' name='Solar Consumption -EJ' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[energy-consumption-by-source-and-region-3.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Entity]</local-name>
+            <parent-name>[energy-consumption-by-source-and-region-3.csv]</parent-name>
+            <remote-alias>Entity</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Code]</local-name>
+            <parent-name>[energy-consumption-by-source-and-region-3.csv]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[energy-consumption-by-source-and-region-3.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Fuel Type' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+      <column caption='Energy Consumed ' datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+      <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='energy-consumption-by-source-and-region-3.csv' datatype='table' name='[__tableau_internal_object_id__].[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]' role='measure' type='quantitative' />
+      <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/halaaloqiel/energy-consumption-by-source-and-region-3.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='10/25/2021 12:47:03 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy' name='Year' />
+            </columns>
+          </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy' name='Year' />
+            </columns>
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <refresh>
+            <refresh-event add-from-file-path='energy-consumption-by-source-and-region-3' increment-value='%null%' refresh-type='create' rows-inserted='220' timestamp-start='2021-10-25 12:47:03.658' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Entity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Entity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Entity</remote-alias>
+              <ordinal>0</ordinal>
+              <family>energy-consumption-by-source-and-region-3.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Code</remote-alias>
+              <ordinal>1</ordinal>
+              <family>energy-consumption-by-source-and-region-3.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>7</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>energy-consumption-by-source-and-region-3.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Pivot</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>141</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Pivot Field Names:nk]' type='palette'>
+            <map to='#1b4278'>
+              <bucket>&quot;Oil Consumption&quot;</bucket>
+            </map>
+            <map to='#3383a2'>
+              <bucket>&quot;Solar Consumption&quot;</bucket>
+            </map>
+            <map to='#a84c23'>
+              <bucket>&quot;Coal Consumption &quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Gas Consumption&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='energy-consumption-by-source-and-region-3.csv' id='energy-consumption-by-source-and-region-3.csv_E54C88CBD0F048F78DBF969F245DAE02'>
+            <properties context=''>
+              <relation name='Pivot' type='pivot'>
+                <columns>
+                  <column datatype='string' name='Pivot Field Names' />
+                  <column datatype='real' name='Pivot Field Values' />
+                </columns>
+                <tag name='Pivot Field Names'>
+                  <value name='[Coal Consumption ]' />
+                  <value name='[Gas Consumption]' />
+                  <value name='[Oil Consumption]' />
+                  <value name='[Solar Consumption]' />
+                </tag>
+                <groups>
+                  <group name='Pivot Field Values'>
+                    <field name='[energy-consumption-by-source-and-region-3.csv].[Coal Consumption - EJ]' />
+                    <field name='[energy-consumption-by-source-and-region-3.csv].[Gas Consumption - EJ]' />
+                    <field name='[energy-consumption-by-source-and-region-3.csv].[Oil Consumption - EJ]' />
+                    <field name='[energy-consumption-by-source-and-region-3.csv].[Solar Consumption -EJ]' />
+                  </group>
+                </groups>
+                <relation connection='textscan.13g86k71ww6g461bq7hiz1pvgm3s' name='energy-consumption-by-source-and-region-3.csv' table='[energy-consumption-by-source-and-region-3#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='string' name='Entity' ordinal='0' />
+                    <column datatype='string' name='Code' ordinal='1' />
+                    <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='2' />
+                    <column datatype='real' name='Oil Consumption - EJ' ordinal='3' />
+                    <column datatype='real' name='Gas Consumption - EJ' ordinal='4' />
+                    <column datatype='real' name='Coal Consumption - EJ' ordinal='5' />
+                    <column datatype='real' name='Solar Consumption -EJ' ordinal='6' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy' name='Year' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_645B3E7F64724FAEB26C9EF5898B34BE]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Fuel Type' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='playfair display' fontsize='12'>Energy Mix in Saudi Arabia </run>
+            <run fontname='playfair display' fontsize='8'>(2019)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='energy-consumption-by-source-and-region-3' name='federated.1esgd6e0re5vpf10hwu0p1bssw8m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1esgd6e0re5vpf10hwu0p1bssw8m'>
+            <column caption='Fuel Type' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Energy Consumed ' datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='Sum' name='[pcto:sum:Pivot Field Values:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Pivot Field Values]' derivation='Sum' name='[sum:Pivot Field Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[none:Pivot Field Names:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Coal Consumption &quot;</bucket>
+              <bucket>&quot;Gas Consumption&quot;</bucket>
+              <bucket>&quot;Solar Consumption&quot;</bucket>
+              <bucket>&quot;Oil Consumption&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[none:Pivot Field Names:nk]' />
+              <wedge-size column='[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[sum:Pivot Field Values:qk]' />
+              <size column='[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[sum:Pivot Field Values:qk]' />
+              <text column='[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[pcto:sum:Pivot Field Values:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontsize='12'><![CDATA[<[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[none:Pivot Field Names:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>% of Total Energy Consumed:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[pcto:sum:Pivot Field Values:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Energy Consumed :&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[sum:Pivot Field Values:qk]>]]></run>
+                <run bold='true'> EJ</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run>Æ&#10;</run>
+                <run><![CDATA[<[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[pcto:sum:Pivot Field Values:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='bottom' />
+                <format attr='wrap' value='auto' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <page-trail-options mark-type='all' />
+      </table>
+      <simple-id uuid='{430ECBD3-4366-48DF-8ADE-ED663FD72C66}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='301' maxwidth='500' minheight='301' minwidth='500' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='94684' id='24' param='horz' type-v2='layout-flow' w='96800' x='1600' y='2658'>
+            <zone h='94684' id='7' param='horz' type-v2='layout-flow' w='64800' x='1600' y='2658'>
+              <zone h='94684' id='5' type-v2='layout-basic' w='64800' x='1600' y='2658'>
+                <zone h='94684' id='3' name='Sheet 1' w='64800' x='1600' y='2658'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='94684' id='23' is-fixed='true' param='vert' type-v2='layout-flow' w='32000' x='66400' y='2658'>
+              <zone fixed-size='84' h='30565' id='26' is-fixed='true' type-v2='empty' w='32000' x='66400' y='2658'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='35216' id='25' name='Sheet 1' pane-specification-id='0' param='[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[none:Pivot Field Names:nk]' type-v2='color' w='32000' x='66400' y='33223'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='28903' id='27' type-v2='empty' w='32000' x='66400' y='68439'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{E5F8EB40-3080-4276-A033-0693348F3C6E}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='276'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[none:Pivot Field Names:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#1967-01-01 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[none:Pivot Field Names:nk]</field>
+            <field>[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[tyr:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C5772F33-2123-42F1-B519-16EDCE51BA70}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1esgd6e0re5vpf10hwu0p1bssw8m].[none:Pivot Field Names:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{8F9D14F4-E3B1-4935-9884-DE6D76EEDEFD}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
