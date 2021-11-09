@@ -61,7 +61,7 @@ svg
   .data(data_ready)
   .enter()
   .append('polyline')
-    .attr("stroke", "white")
+    .attr("stroke", "black")
     .style("fill", "none")
     .attr("stroke-width", 2)
     .attr('points', function(d) {
@@ -80,7 +80,6 @@ svg
   .enter()
   .append('text')
     .text( function(d) { console.log(d.data.key) ; return d.data.key } )
-      .attr("fill","white")
     .attr('transform', function(d) {
         var pos = outerArc.centroid(d);
         var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
