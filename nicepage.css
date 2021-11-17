@@ -11,7 +11,7 @@
 }
 
 .slideIn {
-  transition: transform 400ms ease-in;
+  transition: transform 350ms ease-in;
 }
 .slideIn.appear {
   transform: translateY(0);
