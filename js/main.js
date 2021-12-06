@@ -7,11 +7,11 @@
 var width = 610
     height = 300
     margin = 70
+    radius = Math.min(width, height) / 2 - margin
 
-// The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
-var radius = Math.min(width, height) / 2 - margin
 
-// append the svg object to the div called 'my_dataviz'
+
+// append the svg object to the div
 var svg = d3.select("#chart-area")
   .append("svg")
     .attr("width", width)
@@ -20,25 +20,24 @@ var svg = d3.select("#chart-area")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 // Create data
-var data = {"Oil Consumption: 66.26%": 66.26,"Coal Consumption: 0.02%":0.02, "Gas Consumption: 37.71%": 37.71, "Solar Consumption: 0.01%":0.01}
+var data = {"Oil Consumption: 66.26%": 66.26, "Gas Consumption: 37.71%": 37.71, "Solar Consumption: 0.01%":0.01}
 
 // set the color scale
 var color = d3.scaleOrdinal()
-  .domain(["a", "b", "c", "d"])
-  .range(["#22568B","#0096B4","#C48213","#C55A19"]);
+  .range(["#22568B","#C48213","#C55A19"]);
 
 // Compute the position of each group on the pie:
 var pie = d3.pie()
-  .sort(null) // Do not sort group by size
+  .sort(null)
   .value(function(d) {return d.value; })
 var data_ready = pie(d3.entries(data))
 
-// The arc generator
+
 var arc = d3.arc()
-  .innerRadius(radius * 0.5)         // This is the size of the donut hole
+  .innerRadius(radius * 0.5)
   .outerRadius(radius * 0.8)
 
-// Another arc that won't be drawn. Just for labels positioning
+//  arc function. Just for labels positioning
 var outerArc = d3.arc()
   .innerRadius(radius * 0.9)
   .outerRadius(radius * 0.9)
